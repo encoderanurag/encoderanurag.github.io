@@ -1,0 +1,402 @@
+ body{
+  background-color: rgb(80, 28, 10);
+  margin: 0;
+  padding: 0;
+ }
+
+ .open-nav{
+   color: yellow;
+ }
+ 
+ 
+ 
+ /* The Overlay (background) */
+ .overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0,1); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+} 
+
+
+.open-nav{
+  position: relative;
+  left: 18px;
+  top: 15px;
+}
+
+.open-nav:hover{
+  cursor: pointer;
+}
+
+/*brand banner design*/
+
+
+.brand-banner{
+  
+  text-align: center;
+  position: relative;
+}
+
+.brand{
+  display: inline;
+  font-size: 30px;
+  font-weight: 800;
+  position: relative;
+  top: -24px;
+  color: whitesmoke;
+}
+
+@media screen and (max-width: 600px) {
+  .brand{
+    display: inline;
+    font-size: 30px;
+    font-weight: 800;
+    position: relative;
+    top: -30px;
+    color: whitesmoke;
+  }
+}
+
+
+.brand > a{
+  text-decoration: none;
+}
+
+/* banner image*/
+.banner > img{
+  max-width: 94%;
+  position: relative;
+  top: 30px;
+  left: 42px;
+}
+
+@media only screen and (max-width: 500px) {
+  .banner > img{
+    max-width: 78%;
+    
+    position: relative;
+    top: 10px;
+  }
+}
+
+
+/* gallery.html styling*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  margin-top: 50px;
+}
+
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 20%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+.column img:hover{
+  border: 5px solid rgb(200, 255, 0);
+  transform: scaleY(1.1);
+  
+  
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.button{
+  width: 150px;
+  height: 50px;
+  display: inline-block;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 7, 7);
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  border: 2px solid green;
+  border-radius: 30px;
+  text-align: center;
+  padding-top: 8px;
+  margin-bottom: 2em;
+  position: relative;
+  top: 200px;
+  left: 590px;
+  padding-top: 3px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+@media screen and (max-width: 600px) {
+  .button{
+    width: 130px;
+    height: 40px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    position: relative;
+    top: 50px;
+    left: 110px;
+    padding-top: 3px;
+  }
+  
+}
+
+
+/* gallery.html styling ends*/
+
+/* grid styling*/
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  
+}
+
+
+.container {
+  width: 94%;
+  margin: 2rem auto; 
+  position: relative;
+  top: 30px;
+
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 5vw);
+  grid-gap: 10px; 
+}
+@media screen and (max-width: 600px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(8, 2fr);
+    grid-template-rows: repeat(12, 5vw);
+    grid-gap: 10px; 
+  }
+}
+
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; 
+}
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  
+
+  /** Alternative Syntax **/
+  /* grid-column: 1 / span 2;  */
+  /* grid-row: 1 / span 2; */
+}
+
+@media screen and (max-width: 600px) {
+  .item1 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 5;
+  }  
+}
+
+
+.item2 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  /** Alternative Syntax **/
+  /* grid-column: 3 / span 2;  */
+  /* grid-row: 1 / span 2; */
+}
+@media screen and (max-width: 600px) {
+  .item2 {
+    grid-column-start: 6;
+    grid-column-end: 12;
+    grid-row-start: 1;
+    grid-row-end: 5;
+  }  
+}
+
+.item3 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 6;
+
+  /** Alternative Syntax **/
+  /* grid-column: 5 / span 4;
+  grid-row: 1 / span 5; */
+}
+@media screen and (max-width: 600px) {
+  .item2 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 9;
+  }  
+}
+
+.item4 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 6;
+
+  /** Alternative Syntax **/
+  /* grid-column: 1 / span 4;  */
+  /* grid-row: 3 / span 3; */
+}
+
+.item5 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 6;
+  grid-row-end: 9;
+
+  /** Alternative Syntax **/
+  /* grid-column: 1 / span 4; */
+  /* grid-row: 6 / span 3; */
+}
+
+.item6 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 6;
+  grid-row-end: 9;
+
+  /** Alternative Syntax **/
+  /* grid-column: 5 / span 4; */
+  /* grid-row: 6 / span 3; */
+}
+
+
+.corousel-allign{
+
+  position: relative;
+  top: 150px;
+}
+
+@media screen and (max-width: 600px) {
+  .corousel-allign{
+
+    position: relative;
+    top: 80px;
+    margin: 10px;
+  }
+}
+
+.intro-text{
+  position: relative;
+  top: 30px;
+  color: bisque;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.intro-text-heading{
+  color: rebeccapurple;
+}
+
+.para{
+  color: yellow;
+}
