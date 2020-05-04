@@ -1,5 +1,5 @@
  body{
-  background-color: rgb(80, 28, 10);
+  background-color: rgb(221, 78, 30);
   margin: 10px;
   padding: 0;
  }
@@ -173,60 +173,22 @@
 }
 
 .button{
-  width: 150px;
-  height: 50px;
-  display: inline-block;
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 7, 7);
-  font-weight: 600;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  border: 2px solid green;
-  border-radius: 30px;
-  text-align: center;
-  padding-top: 8px;
-  margin-bottom: 2em;
+ 
   position: relative;
   top: 50px;
   left: 590px;
-  padding-top: 3px;
+  margin-bottom: 50px;
 }
 
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: '»';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
 @media screen and (max-width: 600px) {
   .button{
-    width: 130px;
-    height: 40px;
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
+   
+
     position: relative;
-    top: 30px;
+    top: 40px;
     left: 100px;
     padding-top: 3px;
+    margin-bottom: 50px;
   }
   
 }
@@ -287,8 +249,7 @@
   position: relative;
   top: 30px;
   color: bisque;
-  margin-left: 10px;
-  margin-right: 10px;
+  text-align: center;
 }
 
 .intro-text-heading{
@@ -387,6 +348,72 @@
   
   
 }
+}
+
+/* about page */
+
+.about-container{
+  margin-left: -10px;
+  margin-right: -10px;
+  position: relative;
+  top: 50px;
+  text-decoration: none;
+}
+
+.inner-about-container{
+  color: yellow;
+  text-decoration: none;
+  background-color: black;
+  padding: 50px;
+}
+
+/* log in page*/ 
+
+
+/* Welcome page*/ 
+
+.wlcm-div{
+  color: white;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  top: 0px;
+  
+}
+ .wlcm-heading{
+   font-family: 'Lobster', cursive;;
+ }
+
+ .wlcm-heading-h4{
+   color:yellow;
+   font-family: 'Dancing Script', cursive;
+ }
+.screenshot{
+  width: 80%;
+  margin: 100px;
+
+}
+@media screen and (max-width: 600px) {
+  .screenshot{
+    width: 80%;
+  margin:20px
+  
+}
+}
+.img-caption{
+  color: yellow;
+  text-align: center;
+}
+.wlcm-heading-h3{
+  color: aqua;
+}
+
+
+
+.wlcm-btn{
+  position: relative;
+  top: 10px;
+  margin: auto;
 }
 
 
