@@ -1,5 +1,9 @@
  body{
-  background-color: rgb(221, 78, 30);
+  background: #136a8a;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #267871, #136a8a);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #267871, #136a8a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+background-repeat: initial;
   margin: 10px;
   padding: 0;
  }
@@ -129,6 +133,12 @@
   }
 }
 
+.main-section{
+  background-color: black;
+  color: white;
+  margin: -10px;
+  padding: 15px;
+}
 
 /* gallery.html styling*/
 .row {
@@ -176,7 +186,7 @@
  
   position: relative;
   top: 50px;
-  left: 590px;
+  left: 540px;
   margin-bottom: 50px;
 }
 
