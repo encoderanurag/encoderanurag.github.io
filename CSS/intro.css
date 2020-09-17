@@ -1,0 +1,17 @@
+body{
+  background-color: #1B2432;
+}
+
+.container-fluid{
+background-color: #95b768;
+
+}
+
+.nav a{
+  color: white;
+}
+
+.ads{
+  transform: skewX(20deg);
+}
+.intro

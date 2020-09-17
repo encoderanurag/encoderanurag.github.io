@@ -97,7 +97,7 @@ background-repeat: initial;
   font-weight: 800;
   position: relative;
   top: -24px;
-  color: whitesmoke;
+  color: rgb(172, 9, 9);
 }
 
 @media screen and (max-width: 600px) {

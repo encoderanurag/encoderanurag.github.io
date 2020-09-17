@@ -1,0 +1,38 @@
+.brand a{
+  position: relative;
+  left: 70px;
+  color: rgb(255, 255, 255);
+}
+
+
+
+.insider{
+  font-size: 30px;
+  position: relative;
+  left: 450px;
+  top: -22px;
+  color: blueviolet;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.insider a{
+  color: rgb(253, 208, 8);
+ 
+}
+
+
+@media screen and (max-width: 600px) {
+  .insider{
+    font-size: 15px ;
+    position: relative;
+  left: 70px;
+  top: -32px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .brand{
+    position: relative;
+    left: -25px;
+    color: rgb(255, 255, 255);
+  }
+}
